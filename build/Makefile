@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /home/ubuntu/Aravinth/submodle/NEW/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -136,6 +182,188 @@ adder/fast:
 	$(MAKE) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/build
 .PHONY : adder/fast
 
+#=============================================================================
+# Target rules for targets named open62541-generator-transport
+
+# Build rule for target.
+open62541-generator-transport: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-generator-transport
+.PHONY : open62541-generator-transport
+
+# fast build rule for target.
+open62541-generator-transport/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-generator-transport.dir/build.make libraries/open62541/CMakeFiles/open62541-generator-transport.dir/build
+.PHONY : open62541-generator-transport/fast
+
+#=============================================================================
+# Target rules for targets named open62541-generator-ids-ns0
+
+# Build rule for target.
+open62541-generator-ids-ns0: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-generator-ids-ns0
+.PHONY : open62541-generator-ids-ns0
+
+# fast build rule for target.
+open62541-generator-ids-ns0/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-generator-ids-ns0.dir/build.make libraries/open62541/CMakeFiles/open62541-generator-ids-ns0.dir/build
+.PHONY : open62541-generator-ids-ns0/fast
+
+#=============================================================================
+# Target rules for targets named open62541-generator-statuscode
+
+# Build rule for target.
+open62541-generator-statuscode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-generator-statuscode
+.PHONY : open62541-generator-statuscode
+
+# fast build rule for target.
+open62541-generator-statuscode/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-generator-statuscode.dir/build.make libraries/open62541/CMakeFiles/open62541-generator-statuscode.dir/build
+.PHONY : open62541-generator-statuscode/fast
+
+#=============================================================================
+# Target rules for targets named open62541-generator-namespace
+
+# Build rule for target.
+open62541-generator-namespace: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-generator-namespace
+.PHONY : open62541-generator-namespace
+
+# fast build rule for target.
+open62541-generator-namespace/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-generator-namespace.dir/build.make libraries/open62541/CMakeFiles/open62541-generator-namespace.dir/build
+.PHONY : open62541-generator-namespace/fast
+
+#=============================================================================
+# Target rules for targets named open62541-object
+
+# Build rule for target.
+open62541-object: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-object
+.PHONY : open62541-object
+
+# fast build rule for target.
+open62541-object/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-object.dir/build.make libraries/open62541/CMakeFiles/open62541-object.dir/build
+.PHONY : open62541-object/fast
+
+#=============================================================================
+# Target rules for targets named open62541-plugins
+
+# Build rule for target.
+open62541-plugins: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-plugins
+.PHONY : open62541-plugins
+
+# fast build rule for target.
+open62541-plugins/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-plugins.dir/build.make libraries/open62541/CMakeFiles/open62541-plugins.dir/build
+.PHONY : open62541-plugins/fast
+
+#=============================================================================
+# Target rules for targets named open62541-generator-types
+
+# Build rule for target.
+open62541-generator-types: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-generator-types
+.PHONY : open62541-generator-types
+
+# fast build rule for target.
+open62541-generator-types/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-generator-types.dir/build.make libraries/open62541/CMakeFiles/open62541-generator-types.dir/build
+.PHONY : open62541-generator-types/fast
+
+#=============================================================================
+# Target rules for targets named open62541
+
+# Build rule for target.
+open62541: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541
+.PHONY : open62541
+
+# fast build rule for target.
+open62541/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541.dir/build.make libraries/open62541/CMakeFiles/open62541.dir/build
+.PHONY : open62541/fast
+
+#=============================================================================
+# Target rules for targets named clang-tidy
+
+# Build rule for target.
+clang-tidy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clang-tidy
+.PHONY : clang-tidy
+
+# fast build rule for target.
+clang-tidy/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/clang-tidy.dir/build.make libraries/open62541/CMakeFiles/clang-tidy.dir/build
+.PHONY : clang-tidy/fast
+
+#=============================================================================
+# Target rules for targets named open62541-code-generation
+
+# Build rule for target.
+open62541-code-generation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 open62541-code-generation
+.PHONY : open62541-code-generation
+
+# fast build rule for target.
+open62541-code-generation/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/open62541-code-generation.dir/build.make libraries/open62541/CMakeFiles/open62541-code-generation.dir/build
+.PHONY : open62541-code-generation/fast
+
+#=============================================================================
+# Target rules for targets named cpplint
+
+# Build rule for target.
+cpplint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cpplint
+.PHONY : cpplint
+
+# fast build rule for target.
+cpplint/fast:
+	$(MAKE) -f libraries/open62541/CMakeFiles/cpplint.dir/build.make libraries/open62541/CMakeFiles/cpplint.dir/build
+.PHONY : cpplint/fast
+
+#=============================================================================
+# Target rules for targets named doc
+
+# Build rule for target.
+doc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doc
+.PHONY : doc
+
+# fast build rule for target.
+doc/fast:
+	$(MAKE) -f libraries/open62541/doc/CMakeFiles/doc.dir/build.make libraries/open62541/doc/CMakeFiles/doc.dir/build
+.PHONY : doc/fast
+
+#=============================================================================
+# Target rules for targets named doc_pdf
+
+# Build rule for target.
+doc_pdf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doc_pdf
+.PHONY : doc_pdf
+
+# fast build rule for target.
+doc_pdf/fast:
+	$(MAKE) -f libraries/open62541/doc/CMakeFiles/doc_pdf.dir/build.make libraries/open62541/doc/CMakeFiles/doc_pdf.dir/build
+.PHONY : doc_pdf/fast
+
+#=============================================================================
+# Target rules for targets named doc_latex
+
+# Build rule for target.
+doc_latex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doc_latex
+.PHONY : doc_latex
+
+# fast build rule for target.
+doc_latex/fast:
+	$(MAKE) -f libraries/open62541/doc/CMakeFiles/doc_latex.dir/build.make libraries/open62541/doc/CMakeFiles/doc_latex.dir/build
+.PHONY : doc_latex/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -169,10 +397,28 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... OLAS"
 	@echo "... adder"
+	@echo "... open62541-generator-transport"
+	@echo "... open62541-generator-ids-ns0"
+	@echo "... open62541-generator-statuscode"
+	@echo "... open62541-generator-namespace"
+	@echo "... open62541-object"
+	@echo "... open62541-plugins"
+	@echo "... open62541-generator-types"
+	@echo "... open62541"
+	@echo "... clang-tidy"
+	@echo "... open62541-code-generation"
+	@echo "... cpplint"
+	@echo "... doc"
+	@echo "... doc_pdf"
+	@echo "... doc_latex"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

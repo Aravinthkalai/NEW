@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/OLAS.dir/main.cpp.o  -o OLAS   -L/home/ubuntu/Aravinth/submodle/NEW/Adder  -Wl,-rpath,/home/ubuntu/Aravinth/submodle/NEW/Adder Adder/libadder.a 
+/usr/bin/c++  -g   CMakeFiles/OLAS.dir/main.cpp.o  -o OLAS   -L/home/ubuntu/Aravinth/submodle/NEW/Adder  -Wl,-rpath,/home/ubuntu/Aravinth/submodle/NEW/Adder Adder/libadder.a 
