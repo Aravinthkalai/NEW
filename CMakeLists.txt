@@ -7,7 +7,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 
 add_subdirectory(Adder)
 
-#add_subdirectory(libiraries/open62541)
+add_subdirectory(libiraries/open62541)
 
 target_include_directories(${PROJECT_NAME} PUBLIC Adder)
 
