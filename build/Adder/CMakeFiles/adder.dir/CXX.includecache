@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/Aravinth/submodle/NEW/Adder/adder.cpp
+adder.h
+/home/ubuntu/Aravinth/submodle/NEW/Adder/adder.h
+
+/home/ubuntu/Aravinth/submodle/NEW/Adder/adder.h
+

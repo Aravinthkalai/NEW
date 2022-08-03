@@ -1,0 +1,6 @@
+/home/ubuntu/Aravinth/submodle/NEW/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Aravinth/submodle/NEW/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/Aravinth/submodle/NEW/build/CMakeFiles/OLAS.dir
+/home/ubuntu/Aravinth/submodle/NEW/build/Adder/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Aravinth/submodle/NEW/build/Adder/CMakeFiles/edit_cache.dir
+/home/ubuntu/Aravinth/submodle/NEW/build/Adder/CMakeFiles/adder.dir
